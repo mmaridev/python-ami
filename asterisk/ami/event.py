@@ -50,6 +50,9 @@ class Event(object):
     def __getitem__(self, item):
         return self.keys[item]
 
+    def get(self, item, default=None):
+        return self.keys.get(item, default)
+
     def __setitem__(self, key, value):
         self.keys[key] = value
 
